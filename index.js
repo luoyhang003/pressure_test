@@ -4,7 +4,7 @@ var path = require('path');
 
 var fibos = FIBOS({
   chainId: '68cee14f598d88d340b50940b6ddfba28c444b46cd5f33201ace82c78896793a',
-  keyProvider: ['5KGnDqYco2ukDMw6uMX13DSJMsBAFS81M58CGSjK36Sxbo6gZDm','5JHAye4qVMDpvryrS2uqhD3Y9VK6zu3ywMzpebcgMUvXS49TESf'],
+  keyProvider: ['5Kc5HgrBXrMTSNEtEShAM4ULFMWfrVoSWGir5Kgpfhb5u19h8WR','5JyYQCbfXCkJ18b4gLGSx5xKJLx33CPK9NAQ7F9xwyW3RTLrAmX'],
   httpEndpoint: 'http://127.0.0.1:8801',
   logger: {
     log: null,
@@ -13,13 +13,27 @@ var fibos = FIBOS({
   broadcast: true,
 });
 
-const chunk = fs.readFile(path.resolve(__dirname, `test.tmp`));
+
+
+function randomName(len) {
+    len = len || 23;
+    var chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678';
+    var maxPos = chars.length;
+    var str = '';
+    for (i = 0; i < len; i++) {
+        str += chars.charAt(Math.floor(Math.random() * maxPos));
+    }
+    return new Date().getTime() + str;
+}
+
+const chunk = randomName(10000).toString();
 
 let account = 'testnetbppa1'
 let contract = 'hello'
 
 
-// ctx = fibos.contractSync('eosio');
+
+// let ctx = fibos.contractSync('eosio');
 // let r = ctx.buyrambytesSync('fibos', account, 1 * 1024 * 1024 *1024, {
 //   authorization: 'fibos'
 // });

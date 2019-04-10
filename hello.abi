@@ -55,6 +55,22 @@
         {
           "name": "content5",
           "type": "string"
+        },
+        {
+          "name": "content6",
+          "type": "string"
+        },
+        {
+          "name": "content7",
+          "type": "string"
+        },
+        {
+          "name": "content8",
+          "type": "string"
+        },
+        {
+          "name": "content9",
+          "type": "string"
         }
       ],
       "name": "player"
