@@ -1,0 +1,78 @@
+{
+  "____comment": "",
+  "abi_extensions": [],
+  "actions": [
+    {
+      "name": "hi",
+      "ricardian_contract": "",
+      "type": "hi"
+    }
+  ],
+  "error_messages": [],
+  "ricardian_clauses": [],
+  "structs": [
+    {
+      "base": "",
+      "fields": [
+        {
+          "name": "idx",
+          "type": "int32"
+        },
+        {
+          "name": "content",
+          "type": "string"
+        }
+      ],
+      "name": "hi"
+    },
+    {
+      "base": "",
+      "fields": [
+        {
+          "name": "idx",
+          "type": "int32"
+        },
+        {
+          "name": "content",
+          "type": "string"
+        },
+        {
+          "name": "content1",
+          "type": "string"
+        },
+        {
+          "name": "content2",
+          "type": "string"
+        },
+        {
+          "name": "content3",
+          "type": "string"
+        },
+        {
+          "name": "content4",
+          "type": "string"
+        },
+        {
+          "name": "content5",
+          "type": "string"
+        }
+      ],
+      "name": "player"
+    }
+  ],
+  "tables": [
+    {
+      "index_type": "i64",
+      "key_names": [
+        "id"
+      ],
+      "key_types": [
+        "int64"
+      ],
+      "name": "players",
+      "type": "player"
+    }
+  ],
+  "types": [],
+  "version": "eosio::abi/1.0"
+}
